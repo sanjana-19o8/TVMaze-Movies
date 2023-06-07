@@ -1,38 +1,126 @@
+html {
+  background-color: #0f0f0f;
+
+}
+
 .App {
+  background-color: #0f0f0f;
+  color: whitesmoke;
+  text-align: center;
+  width: 100%;
+}
+.link{
+  text-decoration: none;
+}
+
+.main-title {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: thistle;
+  border: solid 2px thistle;
+  width: fit-content;
+  justify-content: center;
+  margin: auto;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.shows-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+.show-card {
+  background-color: #191B1B;
+  border: solid 1x gray;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 4px;
+}
+.show-card-title {
+  font-size: 40px;
+  font-weight: bolder;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list-group-flush {
+  text-align: left;
+  text-indent: calc(10%);
+  list-style-type: none;
+}
+.card-links {
+  margin: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel-shows {
+  margin: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.show-image {
+  margin: 5px 50px;
+  height: 100%;
+}
+.show-details-container {
+  background: #191B1B;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: calc(100%-100px);
+  padding: 50px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.show-desc {
+  text-align: left;
+  flex: 1;
+}
+.show-links{
+  text-align: left;
+}
+.show-links button, button::after{ 
+  border-radius: 15px;
+  border: none;
+  background-color: gray;
+  padding: 10px;
+  color: #0f0f0f;
 }
 
-.App-link {
-  color: #61dafb;
+.show-links a{
+  color: #0f0f0f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1000px) {
+  .show-image {
+    width: 25%;
+    float: left;
   }
-  to {
-    transform: rotate(360deg);
+  .show-details-container{
+    flex-direction: row;
+  }
+}
+@media screen and (max-width:1000px) and (min-width:500px){
+  .show-details-container{
+  background: #191B1B;
+  background-image: none;
+  padding: 10px;
+  }
+  .carousel-shows{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .show-details-container{
+  background: #191B1B;
+  background-image: none;
+  padding: 5px;
+  }
+  .carousel-shows{
+    margin: 0;
   }
 }

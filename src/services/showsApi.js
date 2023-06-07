@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const api_url = 'https://api.tvmaze.com/search';
+const api_url = 'https://api.tvmaze.com';
 
 export const showsApi = createApi({
     reducerPath: 'showsApi',
@@ -13,9 +13,12 @@ export const showsApi = createApi({
     }),
     endpoints: (builder)=> ({
         getShows: builder.query({
-            query: (query) => `/shows?q=${query}`,
+            query: (query) => `/search/shows?q=${query}`,
         }),
+        getSingleShow: builder.query({
+            query: (showId) => `/lookup/shows?thetvdb=${showId}`,
+        })
     }),
 })
 
-export const { useGetShowsQuery} = showsApi;
+export const { useGetShowsQuery, useGetSingleShowQuery} = showsApi;

@@ -1,14 +1,19 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
 
 function ContainerInsideExample() {
   return (
-    <Navbar expand="lg" variant="light" bg="light">
+    <Navbar expand="lg" variant="dark" bg="dark">
       <Container>
-        <Link to='/'>
+        <a href='/' className='link'>
             <Navbar.Brand> Home</Navbar.Brand>
-        </Link>
+        </a>
+        <a href='/' className='link'>
+            <Navbar.Brand> Running</Navbar.Brand>
+        </a>
+        <a href='/' className='link'>
+            <Navbar.Brand> Active</Navbar.Brand>
+        </a>
       </Container>
     </Navbar>
   );
