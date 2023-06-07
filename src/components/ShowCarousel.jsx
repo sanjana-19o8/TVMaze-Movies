@@ -7,6 +7,8 @@ const ShowCarousel = () => {
     const { data: shows, isFetching } = useGetShowsQuery('all');
     const [ topRatedShows, setTopRatedShows] = useState([]);
     
+    if(isFetching) console.log('loading...');
+    
     useEffect(() => {
         const fetchTopRatedShows = async () => {
           try {
